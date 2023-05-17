@@ -1,0 +1,66 @@
+@font-face {
+  font-family: "Helvetica-Neue";
+  src: url("../../public/fonts/HelveticaNeueCyr-Light.woff") format(".woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Helvetica-Neue";
+  src: url("../../public/fonts/HelveticaNeueCyr-Roman.woff") format(".woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Helvetica-Neue";
+  src: url("../../public/fonts/HelveticaNeueCyr-Bold.woff") format(".woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+h1 {
+  font-family: "Helvetica Neue";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 46px;
+  color: #f0f0f0;
+}
+
+h2 {
+  font-family: "Helvetica Neue";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 37px;
+  color: #0f4c92;
+}
+
+h3 {
+  font-family: "Helvetica Neue";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #f0f0f0;
+}
+
+h4 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #0f4c92;
+}
+
+p {
+  font-family: "Helvetica Neue";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 26px;
+  color: #1b1b1b;
+}
