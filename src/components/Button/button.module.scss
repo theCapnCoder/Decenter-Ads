@@ -1,0 +1,21 @@
+.button {
+  padding: 16px 40px;
+  background: #ff9728;
+  border-radius: 84px;
+  font-family: "Helvetica Neue";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 25px;
+  text-align: center;
+  color: #ffffff;
+
+  &.primary {
+    padding: 16px 79px;
+    color: #ffffff;
+  }
+
+  &.upper {
+    text-transform: uppercase;
+  }
+}
