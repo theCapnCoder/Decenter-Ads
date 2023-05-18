@@ -1,0 +1,115 @@
+@use "../../sass/abstracts/" as *;
+
+.main {
+  min-height: 626px;
+  padding-top: 53px;
+  padding-bottom: 83px;
+  background-image: url("../../assets/img/main_bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @include breakpoint(sm) {
+    padding-top: 35px;
+    min-height: 768px;
+    background-size: contain;
+  }
+
+  .imgWrapper {
+    margin: 0 auto;
+    margin-bottom: 55px;
+    display: flex;
+    max-width: 320px;
+    max-height: 45px;
+    align-items: center;
+
+    @include breakpoint(sm) {
+      margin-bottom: 139px;
+      min-width: 513px;
+    }
+
+    .logoWrapper {
+      margin-right: 10px;
+      width: 162px;
+      height: 45px;
+
+      @include breakpoint(sm) {
+        width: 259px;
+        height: 75px;
+        margin-right: 17px;
+      }
+    }
+
+    .divider {
+      margin-right: 14px;
+      height: 24px;
+      border: 0.5px solid #ffffff;
+
+      @include breakpoint(sm) {
+        height: 40px;
+        margin-right: 23px;
+      }
+    }
+
+    .vidWrapper {
+      width: 121px;
+      height: 20px;
+
+      @include breakpoint(sm) {
+        width: 194px;
+        height: 33px;
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  h1 {
+    margin-bottom: 49px;
+    text-align: center;
+
+    @include breakpoint(sm) {
+      margin: 0 auto;
+      max-width: 787px;
+      margin-bottom: 39px;
+    }
+  }
+
+  h3 {
+    margin-bottom: 62px;
+    padding: 0 22px;
+    text-align: center;
+
+    @include breakpoint(sm) {
+      margin: 0 auto;
+      max-width: 780px;
+      margin-bottom: 71px;
+    }
+  }
+
+  .buttonWrapper {
+    display: flex;
+    justify-content: center;
+    margin-right: 8px;
+
+    @include breakpoint(sm){
+      margin-right: 0px;
+    }
+  }
+
+  .smVisible {
+    @include breakpoint(sm) {
+      display: none;
+    }
+  }
+
+  .lgVisible {
+    display: none;
+
+    @include breakpoint(sm) {
+      display: block;
+    }
+  }
+}
