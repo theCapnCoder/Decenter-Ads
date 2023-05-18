@@ -1,0 +1,69 @@
+@use "../../sass/abstracts/" as *;
+
+.advertising {
+  padding: 70px 20px 70px 19px;
+  background: #b5e4ff;
+
+  h2,
+  h4 {
+    margin: 0 auto;
+    color: #f4f4f4;
+    text-align: center;
+  }
+
+  @include breakpoint(sm) {
+    padding: 97px 0;
+  }
+
+  .card {
+    padding: 64px 0;
+    border-radius: 19px;
+    background: #2b477c;
+
+    @include breakpoint(sm) {
+      margin: 0 auto;
+      padding: 61px 0;
+      max-width: 785px;
+    }
+
+    h2 {
+      margin-bottom: 30px;
+      max-width: 300px;
+
+      @include breakpoint(sm) {
+        margin-bottom: 17px;
+        max-width: 574px;
+      }
+    }
+
+    h4 {
+      max-width: 270px;
+      margin-bottom: 40px;
+      letter-spacing: -0.025em;
+
+      @include breakpoint(sm) {
+        margin-bottom: 30px;
+        max-width: 500px;
+      }
+    }
+
+    .buttonWrapper {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .smVisible {
+    @include breakpoint(sm){
+      display: none;
+    }
+  }
+
+  .lgVisible {
+    display: none;
+
+    @include breakpoint(sm){
+      display: block;
+    }
+  }
+}
