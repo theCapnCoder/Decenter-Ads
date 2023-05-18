@@ -1,15 +1,20 @@
-import React from "react";
+import { FC } from "react";
 
 import styles from "./experience.module.scss";
 
-export const Experience = () => {
+type Props = {
+  title: string;
+  text: string;
+};
+
+export const Experience: FC<Partial<Props>> = ({ title, text }) => {
   return (
     <div className={styles.experience}>
-      <h2>Experience Cannes Lions with Ogury</h2>
+      <h2>{title || "Experience Cannes Lions with Ogury"}</h2>
       <h4>
-        From thought-provoking content, to refreshing cocktails and whimsical
-        stand up comedy sets, we have designed an inspiring program to celebrate
-        the return of Cannes Lions Festival of Creativity 2022.
+        {" "}
+        {text ||
+          "From thought-provoking content, to refreshing cocktails and whimsical stand up comedy sets, we have designed an inspiring program to celebrate the return of Cannes Lions Festival of Creativity 2022."}
       </h4>
     </div>
   );

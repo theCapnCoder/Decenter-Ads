@@ -3,3 +3,4 @@ Button - 0.5hr
 Main - 1.5hr
 Experience - 20min
 Cards - 2hr
+Explore - 20min

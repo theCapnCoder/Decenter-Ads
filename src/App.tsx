@@ -1,6 +1,7 @@
 import Main from "./Blocks/Main";
 import Experience from "./Blocks/Experience";
 import Cards from "./Blocks/Cards";
+import Explore from "./Blocks/Explore";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <Main />
       <Experience />
       <Cards />
+      <Explore />
     </div>
   );
 }
