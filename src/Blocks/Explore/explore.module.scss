@@ -1,0 +1,25 @@
+@use "../../sass/abstracts/" as *;
+
+.explore {
+  @include breakpoint(sm) {
+    
+    h4 {
+      font-family: "Helvetica Neue";
+      line-height: 21px;
+    }
+  }
+
+  .smVisible {
+    @include breakpoint(sm) {
+      display: none;
+    }
+  }
+
+  .lgVisible {
+    display: none;
+
+    @include breakpoint(sm) {
+      display: block;
+    }
+  }
+}
