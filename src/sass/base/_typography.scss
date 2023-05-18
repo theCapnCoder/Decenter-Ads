@@ -1,20 +1,22 @@
+@use "../abstracts/" as *;
+
 @font-face {
-  font-family: "Helvetica-Neue";
-  src: url("../../public/fonts/HelveticaNeueCyr-Light.woff") format(".woff");
+  font-family: "Helvetica Neue";
+  src: url("../../public/fonts/HelveticaNeueCyr-Light.woff");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Helvetica-Neue";
-  src: url("../../public/fonts/HelveticaNeueCyr-Roman.woff") format(".woff");
+  font-family: "Helvetica Neue";
+  src: url("../../public/fonts/HelveticaNeueCyr-Roman.woff");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Helvetica-Neue";
-  src: url("../../public/fonts/HelveticaNeueCyr-Bold.woff") format(".woff");
+  font-family: "Helvetica Neue";
+  src: url("../../public/fonts/HelveticaNeueCyr-Bold.woff");
   font-weight: 700;
   font-style: normal;
 }
@@ -26,6 +28,11 @@ h1 {
   font-size: 38px;
   line-height: 46px;
   color: #f0f0f0;
+
+  @include breakpoint(sm) {
+    font-size: 60px;
+    line-height: 73px;
+  }
 }
 
 h2 {
@@ -44,6 +51,11 @@ h3 {
   font-size: 18px;
   line-height: 21px;
   color: #f0f0f0;
+
+  @include breakpoint(sm) {
+    font-size: 20px;
+    line-height: 24px;
+  }
 }
 
 h4 {

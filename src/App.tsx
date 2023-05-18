@@ -1,5 +1,11 @@
+import Main from "./Blocks/Main";
+
 function App() {
-  return <div className="App">Hello</div>;
+  return (
+    <div>
+      <Main />
+    </div>
+  );
 }
 
 export default App;
