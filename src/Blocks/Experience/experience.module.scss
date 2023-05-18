@@ -16,6 +16,11 @@
 
   h2 {
     margin-bottom: 40px;
+    max-width: 300px;
+
+    @include breakpoint(sm){
+      max-width: none;
+    }
   }
 
   h4 {
