@@ -1,0 +1,28 @@
+@use '../../sass/abstracts/' as *;
+
+.experience {
+  padding: 72px 0px 100px 0px;
+  background: #DEF0FF;
+
+  @include breakpoint(sm){
+    padding: 120px 0;
+  }
+
+  h2,
+  h4 {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  h2 {
+    margin-bottom: 40px;
+  }
+
+  h4 {
+    max-width: 308px;
+
+    @include breakpoint(sm){
+      max-width: 700px;
+    }
+  }
+}
