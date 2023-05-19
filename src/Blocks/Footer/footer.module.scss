@@ -1,0 +1,73 @@
+@use "../../sass/abstracts/" as *;
+
+.footer {
+  padding: 38px 0 60px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #0b83be;
+
+  @include breakpoint(sm) {
+    padding-top: 47px;
+  }
+
+  .logoWrapper {
+    margin-bottom: 1px;
+    width: 299px;
+    height: 94px;
+
+    @include breakpoint(sm) {
+      width: 333px;
+      height: 105px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .title {
+    margin-bottom: 33px;
+
+    @include breakpoint(sm) {
+      margin-bottom: 31px;
+    }
+  }
+
+  .socialWrapper {
+    margin-bottom: 25px;
+
+    @include breakpoint(sm) {
+      margin-bottom: 34px;
+      max-width: none;
+    }
+  }
+
+  .address {
+    max-width: 209px;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    h3 {
+      font-family: "Helvetica Neue";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 14px;
+      text-align: center;
+      color: #ffffff;
+
+      @include breakpoint(sm) {
+        font-size: 20px;
+        line-height: 24px;
+      }
+    }
+
+    @include breakpoint(sm){
+      max-width: none;
+    }
+  }
+}
