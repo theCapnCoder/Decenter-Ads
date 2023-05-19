@@ -1,0 +1,17 @@
+@use '../../sass/abstracts/' as *;
+
+.meet {
+  margin: 0 auto;
+  padding: 59px 0 40px 0;
+  max-width: 326px;
+
+  @include breakpoint(sm){
+    padding: 78px 0 70px 0;
+    max-width: none;
+    margin-left: -10px;
+  }
+
+  h2 {
+    text-align: center;
+  }
+}
