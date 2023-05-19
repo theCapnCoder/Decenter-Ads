@@ -1,4 +1,9 @@
 @use "../../sass/abstracts/" as *;
 
 .map {
+  height: 468px;
+  
+  @include breakpoint(sm){
+    height: 355px;
+  }
 }
