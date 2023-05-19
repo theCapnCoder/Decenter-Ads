@@ -5,6 +5,7 @@ import Explore from "./Blocks/Explore";
 import Advertising from "./Blocks/Advertising";
 import Meet from "./Blocks/Meet";
 import Map from "./Blocks/Map";
+import Footer from "./Blocks/Footer";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Advertising />
       <Meet />
       <Map />
+      <Footer />
     </div>
   );
 }
