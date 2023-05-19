@@ -6,3 +6,4 @@ Cards - 2hr
 Explore - 20min
 Advertising - 0.5hr
 Meet - 10min
+Map - 0.5hr
