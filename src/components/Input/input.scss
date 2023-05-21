@@ -1,0 +1,37 @@
+.UiInputBase {
+  padding: 14px 22px;
+  margin: 7.5px;
+  border: 1px solid #f7f6f6;
+  border-radius: 30px;
+  background: transparent;
+  font-family: "Helvetica Neue";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  color: rgba(178, 227, 255, 0.85);
+
+  width: 300px;
+
+  .Ui-error {
+    border-color: red;
+  }
+
+  &.Ui-fullWidth {
+    width: 100%;
+  }
+
+  &::placeholder {
+    position: relative;
+    top: 22px;
+    font-family: "Helvetica Neue";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 22px;
+    color: rgba(178, 227, 255, 0.85);
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
