@@ -1,0 +1,36 @@
+.form {
+  background: linear-gradient(327.75deg, #0080bf 9.35%, #00496c 117.99%);
+  border-radius: 50px;
+  min-height: 500px;
+
+  .formWrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .groupInputWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    max-width: 719px;
+
+    & > * {
+      flex-grow: 1;
+    }
+
+    &:first-child {
+      margin-bottom: 40px;
+    }
+  }
+
+  :global {
+    .UiInputBase {
+      // margin: 0;
+      // background: blue;
+    }
+  }
+}
+
+.UiInputBase {
+  background: red;
+}
