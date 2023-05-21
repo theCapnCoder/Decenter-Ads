@@ -6,10 +6,12 @@ import Advertising from "./Blocks/Advertising";
 import Meet from "./Blocks/Meet";
 import Map from "./Blocks/Map";
 import Footer from "./Blocks/Footer";
+import Form from "./Blocks/Form";
 
 function App() {
   return (
     <div>
+      <Form />
       <Main />
       <Experience />
       <Cards />
