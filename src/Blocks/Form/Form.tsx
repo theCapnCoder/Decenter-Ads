@@ -6,8 +6,6 @@ import Input from "../../components/Input";
 export const Form = () => {
   return (
     <div className={styles.form}>
-      <Input placeholder="Frist name" />
-      <input type="text" />
       <h1>Form</h1>
 
       <form className={styles.formWrapper}>
@@ -18,24 +16,24 @@ export const Form = () => {
           <Input placeholder="Work Phone" />
         </div>
 
-        <div className={styles.groupInputWrapper}>
+        {/* <div className={styles.groupInputWrapper}>
           <Input placeholder="Country" />
           <Input placeholder="Company Name" />
           <Input placeholder="Business Category" />
           <Input placeholder="Select the date" />
-        </div>
+        </div> */}
 
         <button type="submit">Send</button>
       </form>
 
-      <div>
+      {/* <div>
         <input type="text" autoComplete="hello" />
         <input type="text" />
         <input type="text" />
         <input type="text" />
         <input type="text" />
         <input type="text" />
-      </div>
+      </div> */}
     </div>
   );
 };
