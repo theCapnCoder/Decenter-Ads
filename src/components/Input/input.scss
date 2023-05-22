@@ -22,7 +22,6 @@
 
   &::placeholder {
     position: relative;
-    top: 22px;
     font-family: "Helvetica Neue";
     font-style: normal;
     font-weight: 300;
@@ -33,5 +32,8 @@
 
   &:focus {
     outline: none;
+    &::placeholder {
+      color: transparent;
+    }
   }
 }
