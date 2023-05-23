@@ -1,26 +1,32 @@
 .UiInputBase {
-  padding: 14px 22px;
-  margin: 7.5px;
-  border: 1px solid #f7f6f6;
-  border-radius: 30px;
-  background: transparent;
-  font-family: "Helvetica Neue";
-  font-style: normal;
-  font-weight: 300;
-  font-size: 18px;
-  color: rgba(178, 227, 255, 0.85);
+  position: relative;
 
-  width: 300px;
+  input {
+    width: 300px;
+    padding: 14px 22px;
+    margin: 7.5px;
+    border: 1px solid #f7f6f6;
+    border-radius: 30px;
+    background: transparent;
+    font-family: "Helvetica Neue";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    color: rgba(178, 227, 255, 0.85);
+  }
 
   .Ui-error {
-    border-color: red;
+    position: absolute;
+    bottom: -20px;
+    left: 30px;
+    color: red;
   }
 
   &.Ui-fullWidth {
     width: 100%;
   }
 
-  &::placeholder {
+  ::placeholder {
     position: relative;
     font-family: "Helvetica Neue";
     font-style: normal;
