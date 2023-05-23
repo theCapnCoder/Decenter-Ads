@@ -15,6 +15,7 @@ type Props = {
 
 const MyTextField: FC<Props> = ({ label, ...props }) => {
   const [field, meta, helpers] = useField(props);
+
   return (
     <>
       <label>
@@ -34,7 +35,7 @@ const Example = () => (
     <Formik
       initialValues={{
         email: "",
-        firstName: "red",
+        firstName: "red9888",
         lastName: "",
       }}
       onSubmit={(values, actions) => {
@@ -46,7 +47,7 @@ const Example = () => (
     >
       {(props: FormikProps<Values>) => (
         <Form>
-          <MyTextField name="firstName" type="text" label="First Name" />
+          {/* <MyTextField name="firstName" type="text" label="First Name" /> */}
           <MyTextField name="lastName" type="text" label="Last Name" />
           <MyTextField name="email" type="email" label="Email" />
           <button type="submit">Submit</button>
