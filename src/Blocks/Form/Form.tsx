@@ -4,12 +4,17 @@ import styles from "./form.module.scss";
 import { Formik, FormikProps, Form as FormikForm } from "formik";
 import * as Yup from "yup";
 import Input from "../../components/Input";
+import Autocomplete from "../../components/Autocomplete";
 
 type Values = {
   firstName: string;
   lastName: string;
   workEmail: string;
   workPhone: string;
+  country: string;
+  companyName: string;
+  businessCategory: string;
+  date: string;
 };
 
 const FormSchema = Yup.object().shape({
@@ -33,6 +38,10 @@ export const Form = () => {
     lastName: "",
     workEmail: "",
     workPhone: "",
+    country: "",
+    companyName: "",
+    businessCategory: "",
+    date: "",
   };
 
   return (
@@ -51,6 +60,24 @@ export const Form = () => {
               <Input name="lastName" type="text" placeholder="Last name" />
               <Input name="workEmail" type="email" placeholder="Work email" />
               <Input name="workPhone" type="phone" placeholder="Work Phone" />
+              <input type="select" name="country" placeholder="Country" />
+            </div>
+
+            <Autocomplete />
+
+            <div className={styles.groupInputWrapper}>
+              <Input name="country" type="text" placeholder="Country" />
+              <Input
+                name="companyName"
+                type="text"
+                placeholder="Company Name"
+              />
+              <Input
+                name="businessCategory"
+                type="text"
+                placeholder="Business Category"
+              />
+              <Input name="date" type="date" placeholder="Select the date" />
             </div>
             <button type="submit">Send</button>
           </FormikForm>
