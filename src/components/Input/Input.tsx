@@ -2,6 +2,12 @@ import { FC } from "react";
 import classnames from "classnames";
 
 import './input.scss'
+import { useField } from "formik";
+
+type BaseProps = {
+  name: string,
+  type: string,
+}
 
 type Props = {
   autoFocus: boolean;
@@ -13,7 +19,9 @@ type Props = {
   placeholder: string;
 };
 
-export const Input: FC<Partial<Props>> = ({
+export const Input: FC<BaseProps & Partial<Props>> = ({
+  name,
+  type,
   autoFocus,
   disabled,
   error,
@@ -22,6 +30,11 @@ export const Input: FC<Partial<Props>> = ({
   required,
   placeholder
 }) => {
+
+  console.log(name, type)
+  const [field, meta, helpers] = useField({name, type})
+  
+
   return (
     <input
       className={classnames("UiInputBase", {
@@ -33,6 +46,7 @@ export const Input: FC<Partial<Props>> = ({
       disabled={disabled}
       readOnly={readOnly}
       required={required}
+      {...field}
     ></input>
   );
 };
