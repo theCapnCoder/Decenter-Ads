@@ -1,8 +1,9 @@
 import React from "react";
 
 import styles from "./form.module.scss";
-import Input from "../../components/Input";
 import { Formik, FormikProps, Form as FormikForm } from "formik";
+import * as Yup from "yup";
+import Input from "../../components/Input";
 
 type Values = {
   firstName: string;
@@ -10,6 +11,21 @@ type Values = {
   workEmail: string;
   workPhone: string;
 };
+
+const FormSchema = Yup.object().shape({
+  firstName: Yup.string()
+    .min(3, "Too Short!")
+    .max(10, "Too Long!")
+    .required("First name is required"),
+  lastName: Yup.string()
+    .min(3, "Too Short!")
+    .max(10, "Too long1")
+    .required("Last name is required"),
+  workEmail: Yup.string().email().required("Email is required"),
+  workPhone: Yup.string()
+    .matches(/^\+[1-9]\d{1,14}$/, "Invalid phone number")
+    .required("Phone number is required. Example +123..."),
+});
 
 export const Form = () => {
   const initialValues: Values = {
@@ -25,6 +41,7 @@ export const Form = () => {
 
       <Formik
         initialValues={initialValues}
+        validationSchema={FormSchema}
         onSubmit={(values) => alert(JSON.stringify(values, null, 2))}
       >
         {(props: FormikProps<Values>) => (
@@ -56,7 +73,6 @@ export const Form = () => {
 
         <button type="submit">Send</button>
       </form>
-
     </div>
   );
 };
