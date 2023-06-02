@@ -17,8 +17,8 @@ export const Tree = () => {
       this.children.push(child);
     }
 
-    isLeaf(){
-      return this.children.length === 0
+    isLeaf() {
+      return this.children.length === 0;
     }
 
     getLevel() {
@@ -33,7 +33,17 @@ export const Tree = () => {
       return level;
     }
 
-    
+    getDepth() {
+      let maxDepth = 0;
+      for (const child of this.children) {
+        const childDepth = child.getDepth();
+        if (childDepth > maxDepth) {
+          maxDepth = childDepth;
+        }
+      }
+
+      return maxDepth + 1;
+    }
   }
 
   const root: Node<string> = new Node("A");
@@ -53,7 +63,7 @@ export const Tree = () => {
   // nodeC.addChild(nodeE);
 
   // console.log('root', root)
-  console.log(nodeC.getLevel())
+  console.log(root.getDepth());
 
   // const printTree = (node: Node<string>, level: number = 0) => {
   //   const indent = " ".repeat(level * 4);
