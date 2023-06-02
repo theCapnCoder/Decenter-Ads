@@ -44,6 +44,16 @@ export const Tree = () => {
 
       return maxDepth + 1;
     }
+
+    getSubtree(): Node<T> {
+      const subtree = new Node<T>(this.value);
+      for(const child of this.children){
+        const subtreeChild = child.getSubtree();
+        subtree.addChild(subtreeChild);
+      }
+
+      return subtree;
+    }
   }
 
   const root: Node<string> = new Node("A");
