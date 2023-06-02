@@ -16,6 +16,10 @@ export const Tree = () => {
       child.parent = this;
       this.children.push(child);
     }
+
+    isLeaf(){
+      return this.children.length === 0
+    }
   }
 
   const root: Node<string> = new Node("A");
