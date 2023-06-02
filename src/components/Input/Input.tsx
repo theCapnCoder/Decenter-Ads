@@ -30,7 +30,6 @@ export const Input: FC<BaseProps & Partial<Props>> = ({
   required,
   placeholder,
 }) => {
-  console.log(name, type);
   const [field, meta, helpers] = useField({ name, type });
 
   return (

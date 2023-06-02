@@ -1,7 +1,51 @@
-import React from 'react'
+import React from "react";
 
 export const Tree = () => {
+  class Node<T> {
+    value: T;
+    children: Node<T>[];
+
+    constructor(value: T) {
+      this.value = value;
+      this.children = [];
+    }
+
+    addChild(child: Node<T>) {
+      this.children.push(child);
+    }
+  }
+
+  const root: Node<string> = new Node("A");
+  const nodeB: Node<string> = new Node("B");
+  const nodeC: Node<string> = new Node("C");
+  const nodeD: Node<string> = new Node("D");
+  const nodeE: Node<string> = new Node("E");
+
+  root.addChild(nodeB);
+  root.addChild(nodeC);
+  root.addChild(nodeD);
+  root.addChild(nodeE);
+  // nodeB.addChild(nodeD);
+  // nodeC.addChild(nodeE);
+
+  console.log('root', root)
+
+  const printTree = (node: Node<string>, level: number = 0) => {
+    const indent = " ".repeat(level * 4);
+
+    console.log(indent + node.value);
+
+    for (const child of node.children) {
+      console.log(child, node.value);
+    }
+  };
+
+  printTree(root);
+
   return (
-    <div>Tree</div>
-  )
-}
+    <div>
+      <div>Tree</div>
+      <pre>{JSON.stringify(root, null, 2)}</pre>
+    </div>
+  );
+};
