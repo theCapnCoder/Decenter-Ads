@@ -20,6 +20,20 @@ export const Tree = () => {
     isLeaf(){
       return this.children.length === 0
     }
+
+    getLevel() {
+      let level = 0;
+      let currentNode: Node<T> | null = this;
+
+      while (currentNode.parent) {
+        currentNode = currentNode.parent;
+        level++;
+      }
+
+      return level;
+    }
+
+    
   }
 
   const root: Node<string> = new Node("A");
@@ -29,16 +43,17 @@ export const Tree = () => {
   const nodeE: Node<string> = new Node("E");
 
   root.addChild(nodeB);
-  root.addChild(nodeC);
+  // root.addChild(nodeC);
   // root.addChild(nodeD);
   // root.addChild(nodeE);
   nodeB.addChild(nodeD);
   // nodeB.addChild(nodeD);
-  // nodeB.addChild(nodeD);
+  nodeB.addChild(nodeC);
   // nodeC.addChild(nodeE);
   // nodeC.addChild(nodeE);
 
-  console.log('root', root)
+  // console.log('root', root)
+  console.log(nodeC.getLevel())
 
   // const printTree = (node: Node<string>, level: number = 0) => {
   //   const indent = " ".repeat(level * 4);
