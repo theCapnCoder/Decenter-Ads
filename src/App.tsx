@@ -7,7 +7,7 @@ import Meet from "./Blocks/Meet";
 import Map from "./Blocks/Map";
 import Footer from "./Blocks/Footer";
 import Form from "./Blocks/Form";
-import Example from './Example';
+import Example from "./Example";
 
 function App() {
   return (
