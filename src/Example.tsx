@@ -33,21 +33,26 @@ const MyTextField: FC<Props> = ({ label, ...props }) => {
 
 const Example = () => {
   const [openDropdown, setOpenDropdown] = useState(true);
+  const [value, setValue] = useState("");
 
-  console.log(openDropdown)
+  console.log(openDropdown);
 
   return (
     <div>
       <h1>My Form</h1>
 
       <div className={styles.test}>
-        <h2 onClick={() => setOpenDropdown((prev) => !prev)}>Hello &#x25BE;</h2>
+        <h2>Value: {value}</h2>
+        <h2>
+          Hello
+          <span onClick={() => setOpenDropdown((prev) => !prev)}>&#x25BE;</span>
+        </h2>
         {openDropdown && (
           <ul className={styles.dropdown}>
-            <li>Html</li>
-            <li>Css</li>
-            <li>JavaScript</li>
-            <li>React</li>
+            <li onClick={() => setValue("Html")}>Html</li>
+            <li onClick={() => setValue("Css")}>Css</li>
+            <li onClick={() => setValue("JavaScript")}>JavaScript</li>
+            <li onClick={() => setValue("React")}>React</li>
           </ul>
         )}
       </div>

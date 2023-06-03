@@ -2,15 +2,22 @@
   margin-bottom: 300px;
   position: relative;
 
-  h2 {
+  span {
     cursor: pointer;
   }
 
   ul {
     li {
+      cursor: pointer;
       font-size: 24px;
+      padding: 5px 0;
+      border: 1px solid #000;
       list-style-type: none;
-      background: rgba(0, 0, 0, 0.2);
+      background: rgba(0, 0, 0, 0.1);
+
+      &:hover {
+        background: rgba(0, 0, 0, 0.2);
+      }
     }
   }
 
@@ -26,6 +33,5 @@
     &.active {
       display: block;
     }
-
   }
 }
