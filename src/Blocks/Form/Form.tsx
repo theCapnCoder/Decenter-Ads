@@ -58,8 +58,8 @@ export const Form = () => {
             <div className={styles.groupInputWrapper}>
               <Input name="firstName" type="text" placeholder="Frist name" />
               <Input name="lastName" type="text" placeholder="Last name" />
-              <Input name="workEmail" type="email" placeholder="Work email" />
-              <Input name="workPhone" type="phone" placeholder="Work Phone" />
+              <Input name="workEmail" type="email" placeholder="Work email" select />
+              <Input name="workPhone" type="phone" placeholder="Work Phone" select />
               <input type="select" name="country" placeholder="Country" />
             </div>
 
