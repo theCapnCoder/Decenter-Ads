@@ -2,6 +2,7 @@ import { FC, useState } from "react";
 import { useField, Form, FormikProps, Formik } from "formik";
 
 import styles from "./example.module.scss";
+import { DropDown } from "./assets/img/DropDown";
 
 interface Values {
   firstName: string;
@@ -23,6 +24,7 @@ const MyTextField: FC<Props> = ({ label, ...props }) => {
       <label>
         {label}
         <input {...field} {...props} />
+        <DropDown />
       </label>
       {meta.touched && meta.error ? (
         <div className="error">{meta.error}</div>
