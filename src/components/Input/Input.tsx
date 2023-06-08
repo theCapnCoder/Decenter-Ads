@@ -56,7 +56,7 @@ export const Input: FC<BaseProps & Partial<Props>> = ({
           // <div className="Ui-select">
           //   <DropDown />
           // </div>
-          <DropDownList />
+          <DropDownList onChange={() => console.log()} />
         )}
       </div>
 
