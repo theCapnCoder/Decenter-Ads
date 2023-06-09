@@ -20,6 +20,7 @@ type Props = {
   readOnly: boolean;
   required: boolean;
   placeholder: string;
+  items: string[];
 };
 
 export const Input: FC<BaseProps & Partial<Props>> = ({
@@ -33,8 +34,13 @@ export const Input: FC<BaseProps & Partial<Props>> = ({
   readOnly,
   required,
   placeholder,
+  items,
 }) => {
   const [field, meta, helpers] = useField({ name, type });
+
+  const handleChange = (element: string) => {
+    helpers.setValue(element);
+  };
 
   return (
     <div className="UiInputBase">
@@ -52,12 +58,7 @@ export const Input: FC<BaseProps & Partial<Props>> = ({
           {...field}
         ></input>
 
-        {select && (
-          // <div className="Ui-select">
-          //   <DropDown />
-          // </div>
-          <DropDownList onChange={() => console.log()} />
-        )}
+        {select && items && <DropDownList items={items} onChange={handleChange} />}
       </div>
 
       {meta.error && meta.touched ? (
