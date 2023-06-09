@@ -4,7 +4,6 @@ import styles from "./form.module.scss";
 import { Formik, FormikProps, Form as FormikForm } from "formik";
 import * as Yup from "yup";
 import Input from "../../components/Input";
-import Autocomplete from "../../components/Autocomplete";
 
 type Values = {
   firstName: string;
@@ -60,10 +59,7 @@ export const Form = () => {
               <Input name="lastName" type="text" placeholder="Last name" />
               <Input name="workEmail" type="email" placeholder="Work email" select />
               <Input name="workPhone" type="phone" placeholder="Work Phone" select />
-              <input type="select" name="country" placeholder="Country" />
             </div>
-
-            <Autocomplete />
 
             <div className={styles.groupInputWrapper}>
               <Input name="country" type="text" placeholder="Country" />
@@ -83,23 +79,6 @@ export const Form = () => {
           </FormikForm>
         )}
       </Formik>
-      <form className={styles.formWrapper}>
-        <div className={styles.groupInputWrapper}>
-          {/* <Input name="" type="text" placeholder="Frist name" />
-          <Input name="" type="text" placeholder="Last name" />
-          <Input name="" type="text" placeholder="Work email" />
-          <Input name="" type="text" placeholder="Work Phone" /> */}
-        </div>
-
-        {/* <div className={styles.groupInputWrapper}>
-          <Input placeholder="Country" />
-          <Input placeholder="Company Name" />
-          <Input placeholder="Business Category" />
-          <Input placeholder="Select the date" />
-        </div> */}
-
-        <button type="submit">Send</button>
-      </form>
     </div>
   );
 };
