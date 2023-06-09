@@ -42,4 +42,17 @@
       color: transparent;
     }
   }
+
+  .UiInput{
+    display: inline-flex;
+    position: relative;
+  }
+
+  .Ui-select {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
 }

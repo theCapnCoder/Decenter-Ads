@@ -1,0 +1,41 @@
+.baseDropDown {
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  .icon {
+    cursor: pointer;
+  }
+
+  ul {
+    li {
+      cursor: pointer;
+      font-size: 24px;
+      padding: 5px 0;
+      border: 1px solid #000;
+      list-style-type: none;
+      background: white;
+      // background: rgba(0, 0, 0, 0.1);
+
+      &:hover {
+        background: rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+
+  .dropdown {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    min-width: 260px;
+
+    :hover {
+      display: block;
+    }
+
+    &.active {
+      display: block;
+    }
+  }
+}
