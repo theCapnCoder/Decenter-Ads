@@ -5,25 +5,21 @@ import { DropDown } from "../../../assets/img/DropDown";
 
 type Props = {
   onChange: (value: string) => void;
+  items: string[];
 };
 
-export const DropDownList: FC<Props> = ({ onChange }) => {
+
+export const DropDownList: FC<Props> = ({ onChange, items }) => {
   const [openDropdown, setOpenDropdown] = useState(false);
   const [value, setValue] = useState("");
 
-  // const handleChange = (e: any) => {
-  //   // onChange(e.target.value);
-  //   console.log(e.target.textContent);
-  //   console.log('lol');
-  // };
+  const handleChange: React.MouseEventHandler<HTMLLIElement> = (event) => {
+    const selectElement = event.currentTarget.textContent;
 
-const handleChange = (event: HTMLLIElement)=> {
-  const target = event.currentTarget;
-};
-
-const handleChange1: React.MouseEventHandler<HTMLLIElement> = (event)=> {
-  const target = event.currentTarget;
-}
+    if (selectElement) {
+      onChange(selectElement);
+    }
+  };
 
   return (
     <div className={styles.baseDropDown}>
@@ -36,15 +32,9 @@ const handleChange1: React.MouseEventHandler<HTMLLIElement> = (event)=> {
       <div>
         {openDropdown && (
           <ul className={styles.dropdown}>
-            <li onClick={handleChange}>Html</li>
-            <li onClick={handleChange1}>HtmlTest</li>
-            <li onClick={() => setValue("Css")}>Css</li>
-            <li onClick={() => setValue("JavaScript")}>JavaScript</li>
-            <li onClick={() => setValue("React")}>React</li>
-            {/* <li onClick={() => setValue("Html")}>Html</li>
-            <li onClick={() => setValue("Css")}>Css</li>
-            <li onClick={() => setValue("JavaScript")}>JavaScript</li>
-            <li onClick={() => setValue("React")}>React</li> */}
+            {items.map((item, index) => (
+              <li key={index} onClick={handleChange}>{item}</li>
+            ))}
           </ul>
         )}
       </div>
