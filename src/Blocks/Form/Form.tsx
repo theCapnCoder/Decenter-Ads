@@ -4,7 +4,6 @@ import styles from "./form.module.scss";
 import { Formik, FormikProps, Form as FormikForm } from "formik";
 import * as Yup from "yup";
 import Input from "../../components/Input";
-import Autocomplete from "../../components/Autocomplete";
 
 type Values = {
   firstName: string;
@@ -16,6 +15,25 @@ type Values = {
   businessCategory: string;
   date: string;
 };
+
+const countries = [
+  "Argentina",
+  "Bolivia",
+  "Brazil",
+  "Chile",
+  "Colombia",
+  "Ecuador",
+  "Paraguay",
+];
+
+const businessCategorys = [
+  "IT",
+  "Finance",
+  "Marketing",
+  "Sales",
+  "Engineering",
+  "Legal",
+];
 
 const FormSchema = Yup.object().shape({
   firstName: Yup.string()
@@ -58,15 +76,26 @@ export const Form = () => {
             <div className={styles.groupInputWrapper}>
               <Input name="firstName" type="text" placeholder="Frist name" />
               <Input name="lastName" type="text" placeholder="Last name" />
-              <Input name="workEmail" type="email" placeholder="Work email" select />
-              <Input name="workPhone" type="phone" placeholder="Work Phone" select />
-              <input type="select" name="country" placeholder="Country" />
+              <Input name="workEmail" type="email" placeholder="Work email" />
+              <Input name="workPhone" type="phone" placeholder="Work Phone" />
             </div>
 
-            <Autocomplete />
+            <label htmlFor="fruits">Select a fruit:</label>
+            <select id="fruits">
+              <option value="apple">Apple</option>
+              <option value="banana">Banana</option>
+              <option value="orange">Orange</option>
+              <option value="grape">Grape</option>
+            </select>
 
             <div className={styles.groupInputWrapper}>
-              <Input name="country" type="text" placeholder="Country" />
+              <Input
+                name="country"
+                type="text"
+                placeholder="Country"
+                select
+                items={countries}
+              />
               <Input
                 name="companyName"
                 type="text"
@@ -76,6 +105,8 @@ export const Form = () => {
                 name="businessCategory"
                 type="text"
                 placeholder="Business Category"
+                select
+                items={businessCategorys}
               />
               <Input name="date" type="date" placeholder="Select the date" />
             </div>
@@ -83,23 +114,6 @@ export const Form = () => {
           </FormikForm>
         )}
       </Formik>
-      <form className={styles.formWrapper}>
-        <div className={styles.groupInputWrapper}>
-          {/* <Input name="" type="text" placeholder="Frist name" />
-          <Input name="" type="text" placeholder="Last name" />
-          <Input name="" type="text" placeholder="Work email" />
-          <Input name="" type="text" placeholder="Work Phone" /> */}
-        </div>
-
-        {/* <div className={styles.groupInputWrapper}>
-          <Input placeholder="Country" />
-          <Input placeholder="Company Name" />
-          <Input placeholder="Business Category" />
-          <Input placeholder="Select the date" />
-        </div> */}
-
-        <button type="submit">Send</button>
-      </form>
     </div>
   );
 };

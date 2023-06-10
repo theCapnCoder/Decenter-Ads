@@ -7,12 +7,10 @@ import Meet from "./Blocks/Meet";
 import Map from "./Blocks/Map";
 import Footer from "./Blocks/Footer";
 import Form from "./Blocks/Form";
-import Example from "./Example";
 
 function App() {
   return (
     <div>
-      <Example />
       <Form />
       <Main />
       <Experience />
