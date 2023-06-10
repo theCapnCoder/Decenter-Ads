@@ -1,10 +1,22 @@
 {
   "files": {
-    "main.js": "/Decenter-Ads/static/js/main.218c8032.js",
+    "main.css": "/Decenter-Ads/static/css/main.984ed21c.css",
+    "main.js": "/Decenter-Ads/static/js/main.16067a01.js",
+    "static/media/main_bg.jpg": "/Decenter-Ads/static/media/main_bg.1871655ff3437c5033a4.jpg",
+    "static/media/pineapple.jpg": "/Decenter-Ads/static/media/pineapple.6e2bb1de71df63f9291e.jpg",
+    "static/media/food.jpg": "/Decenter-Ads/static/media/food.9eda9fabfb83dc9f2d9f.jpg",
+    "static/media/drink.jpg": "/Decenter-Ads/static/media/drink.59f8f003a6eedbc271d4.jpg",
+    "static/media/map.jpg": "/Decenter-Ads/static/media/map.f789ebea9a8a7c285fed.jpg",
+    "static/media/map_mobile.jpg": "/Decenter-Ads/static/media/map_mobile.0d6ed79f8e697c353a95.jpg",
+    "static/media/HelveticaNeueCyr-Light.woff": "/Decenter-Ads/static/media/HelveticaNeueCyr-Light.c1b4dce50601b85b61e7.woff",
+    "static/media/HelveticaNeueCyr-Roman.woff": "/Decenter-Ads/static/media/HelveticaNeueCyr-Roman.0247694e510ebe67cce1.woff",
+    "static/media/HelveticaNeueCyr-Bold.woff": "/Decenter-Ads/static/media/HelveticaNeueCyr-Bold.e8ac3e02953308d54ad6.woff",
     "index.html": "/Decenter-Ads/index.html",
-    "main.218c8032.js.map": "/Decenter-Ads/static/js/main.218c8032.js.map"
+    "main.984ed21c.css.map": "/Decenter-Ads/static/css/main.984ed21c.css.map",
+    "main.16067a01.js.map": "/Decenter-Ads/static/js/main.16067a01.js.map"
   },
   "entrypoints": [
-    "static/js/main.218c8032.js"
+    "static/css/main.984ed21c.css",
+    "static/js/main.16067a01.js"
   ]
 }
