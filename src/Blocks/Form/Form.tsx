@@ -79,15 +79,7 @@ export const Form = () => {
               <Input name="workEmail" type="email" placeholder="Work email" />
               <Input name="workPhone" type="phone" placeholder="Work Phone" />
             </div>
-
-            <label htmlFor="fruits">Select a fruit:</label>
-            <select id="fruits">
-              <option value="apple">Apple</option>
-              <option value="banana">Banana</option>
-              <option value="orange">Orange</option>
-              <option value="grape">Grape</option>
-            </select>
-
+            
             <div className={styles.groupInputWrapper}>
               <Input
                 name="country"
@@ -108,7 +100,7 @@ export const Form = () => {
                 select
                 items={businessCategorys}
               />
-              <Input name="date" type="date" placeholder="Select the date" />
+              <Input name="date" type="date" defaultValue="hello" placeholder="Select the date" />
             </div>
             <button type="submit">Send</button>
           </FormikForm>
