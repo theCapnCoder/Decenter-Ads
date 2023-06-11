@@ -55,6 +55,7 @@ export const Input: FC<BaseProps & Partial<Props>> = ({
           disabled={disabled}
           readOnly={readOnly}
           required={required}
+          type={type}
           {...field}
         ></input>
 
