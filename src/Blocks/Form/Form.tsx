@@ -100,7 +100,7 @@ export const Form = () => {
                 select
                 items={businessCategorys}
               />
-              <Input name="date" type="date" defaultValue="hello" placeholder="Select the date" />
+              <Input name="date" type="date" placeholder="Select the date" />
             </div>
             <button type="submit">Send</button>
           </FormikForm>
