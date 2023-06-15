@@ -1,5 +1,4 @@
 .form {
-  background: linear-gradient(327.75deg, #0080bf 9.35%, #00496c 117.99%);
   border-radius: 50px;
   min-height: 500px;
 
@@ -23,14 +22,11 @@
   }
 
   .groupInputWrapper {
-    display: flex;
-    flex-wrap: wrap;
+    margin-bottom: 40px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     gap: 15px;
-    max-width: 719px;
-
-    & > * {
-      flex-grow: 1;
-    }
 
     &:first-child {
       margin-bottom: 40px;
