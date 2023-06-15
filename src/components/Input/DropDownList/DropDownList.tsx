@@ -11,10 +11,10 @@ type Props = {
 export const DropDownList: FC<Props> = ({ onChange, items }) => {
   const [openDropdown, setOpenDropdown] = useState(false);
   const blockRef = useRef<HTMLDivElement | null>(null);
-  const [value, setValue] = useState("");
 
   const handleChange: React.MouseEventHandler<HTMLLIElement> = (event) => {
     const selectElement = event.currentTarget.textContent;
+    setOpenDropdown(false);
 
     if (selectElement) {
       onChange(selectElement);

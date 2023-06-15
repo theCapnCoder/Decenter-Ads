@@ -4,8 +4,16 @@ import logo from "../../assets/img/logo.png";
 import vid from "../../assets/img/vid.png";
 
 import styles from "./main.module.scss";
+import { Modal } from "../../components/Modal/Modal";
+import Form from "../Form";
 
 export const Main = () => {
+  const [modalActive, setModalActive] = React.useState(false);
+
+  const toggleModal = () => {
+    setModalActive((prev) => !prev);
+  };
+
   return (
     <div className={styles.main}>
       <div className={styles.imgWrapper}>
@@ -34,9 +42,17 @@ export const Main = () => {
         Description Description Description Description Description Description
       </h3>
       <div className={styles.buttonWrapper}>
-        <Button classNames={styles.smVisible}>Book your spot</Button>
-        <Button classNames={styles.lgVisible}>Join us at Cannes</Button>
+        <Button classNames={styles.smVisible} onClick={toggleModal}>
+          Book your spot
+        </Button>
+        <Button classNames={styles.lgVisible} onClick={toggleModal}>
+          Join us at Cannes
+        </Button>
       </div>
+
+      <Modal active={modalActive} setActive={setModalActive}>
+        <Form />
+      </Modal>
     </div>
   );
 };

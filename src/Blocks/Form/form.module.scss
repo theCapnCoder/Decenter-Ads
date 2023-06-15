@@ -1,7 +1,20 @@
 .form {
-  background: linear-gradient(327.75deg, #0080bf 9.35%, #00496c 117.99%);
   border-radius: 50px;
   min-height: 500px;
+
+  h1 {
+    text-align: start;
+    font-family: "Helvetica Neue";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 49px;
+    color: #f9f9f9;
+  }
+
+  .buttonWrapper {
+    margin: 0 auto;
+  }
 
   .formWrapper {
     display: flex;
@@ -9,14 +22,11 @@
   }
 
   .groupInputWrapper {
-    display: flex;
-    flex-wrap: wrap;
+    margin-bottom: 40px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     gap: 15px;
-    max-width: 719px;
-
-    & > * {
-      flex-grow: 1;
-    }
 
     &:first-child {
       margin-bottom: 40px;

@@ -4,6 +4,7 @@ import styles from "./form.module.scss";
 import { Formik, FormikProps, Form as FormikForm } from "formik";
 import * as Yup from "yup";
 import Input from "../../components/Input";
+import Button from "../../components/Button";
 
 type Values = {
   firstName: string;
@@ -64,7 +65,7 @@ export const Form = () => {
 
   return (
     <div className={styles.form}>
-      <h1>Form</h1>
+      <h1>Book a session with our specialist</h1>
 
       <Formik
         initialValues={initialValues}
@@ -74,12 +75,32 @@ export const Form = () => {
         {(props: FormikProps<Values>) => (
           <FormikForm className={styles.formWrapper}>
             <div className={styles.groupInputWrapper}>
-              <Input name="firstName" type="text" placeholder="Frist name" />
-              <Input name="lastName" type="text" placeholder="Last name" />
-              <Input name="workEmail" type="email" placeholder="Work email" />
-              <Input name="workPhone" type="phone" placeholder="Work Phone" />
+              <Input
+                fullWidth
+                name="firstName"
+                type="text"
+                placeholder="Frist name"
+              />
+              <Input
+                fullWidth
+                name="lastName"
+                type="text"
+                placeholder="Last name"
+              />
+              <Input
+                fullWidth
+                name="workEmail"
+                type="email"
+                placeholder="Work email"
+              />
+              <Input
+                fullWidth
+                name="workPhone"
+                type="phone"
+                placeholder="Work Phone"
+              />
             </div>
-            
+
             <div className={styles.groupInputWrapper}>
               <Input
                 name="country"
@@ -87,11 +108,13 @@ export const Form = () => {
                 placeholder="Country"
                 select
                 items={countries}
+                fullWidth
               />
               <Input
                 name="companyName"
                 type="text"
                 placeholder="Company Name"
+                fullWidth
               />
               <Input
                 name="businessCategory"
@@ -99,10 +122,18 @@ export const Form = () => {
                 placeholder="Business Category"
                 select
                 items={businessCategorys}
+                fullWidth
               />
-              <Input name="date" type="date" placeholder="Select the date" />
+              <Input
+                name="date"
+                type="date"
+                placeholder="Select the date"
+                fullWidth
+              />
             </div>
-            <button type="submit">Send</button>
+            <div className={styles.buttonWrapper}>
+              <Button size="medium">Send</Button>
+            </div>
           </FormikForm>
         )}
       </Formik>

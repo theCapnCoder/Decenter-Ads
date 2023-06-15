@@ -4,7 +4,6 @@
   input {
     width: 300px;
     padding: 14px 22px;
-    margin: 7.5px;
     border: 1px solid #f7f6f6;
     border-radius: 30px;
     background: transparent;
@@ -22,7 +21,13 @@
     color: red;
   }
 
-  &.Ui-fullWidth {
+  .UiInput{
+    width: 100%;
+    display: inline-flex;
+    position: relative;
+  }
+
+  .Ui-fullWidth {
     width: 100%;
   }
 
@@ -41,11 +46,6 @@
     &::placeholder {
       color: transparent;
     }
-  }
-
-  .UiInput{
-    display: inline-flex;
-    position: relative;
   }
 
   .Ui-select {
