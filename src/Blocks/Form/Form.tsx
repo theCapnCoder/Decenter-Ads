@@ -4,6 +4,7 @@ import styles from "./form.module.scss";
 import { Formik, FormikProps, Form as FormikForm } from "formik";
 import * as Yup from "yup";
 import Input from "../../components/Input";
+import Button from "../../components/Button";
 
 type Values = {
   firstName: string;
@@ -64,7 +65,7 @@ export const Form = () => {
 
   return (
     <div className={styles.form}>
-      <h1>Form</h1>
+      <h1>Book a session with our specialist</h1>
 
       <Formik
         initialValues={initialValues}
@@ -102,7 +103,9 @@ export const Form = () => {
               />
               <Input name="date" type="date" placeholder="Select the date" />
             </div>
-            <button type="submit">Send</button>
+            <div className={styles.buttonWrapper}>
+              <Button size="medium">Send</Button>
+            </div>
           </FormikForm>
         )}
       </Formik>
