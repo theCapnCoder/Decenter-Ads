@@ -3,6 +3,20 @@
   border-radius: 50px;
   min-height: 500px;
 
+  h1 {
+    text-align: start;
+    font-family: "Helvetica Neue";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 49px;
+    color: #f9f9f9;
+  }
+
+  .buttonWrapper {
+    margin: 0 auto;
+  }
+
   .formWrapper {
     display: flex;
     flex-direction: column;
