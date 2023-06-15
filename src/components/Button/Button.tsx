@@ -8,11 +8,19 @@ type Props = {
   classNames: string;
   color: "primary";
   upper: boolean;
+  onClick: () => void;
 };
 
-export const Button: FC<Partial<Props>> = ({ children, classNames, color, upper }) => {
+export const Button: FC<Partial<Props>> = ({
+  children,
+  classNames,
+  color,
+  upper,
+  onClick,
+}) => {
   return (
     <button
+      onClick={onClick}
       className={classnames(styles.button, classNames, {
         [styles.primary]: color === "primary",
         [styles.upper]: upper,
