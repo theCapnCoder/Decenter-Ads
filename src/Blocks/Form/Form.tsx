@@ -75,10 +75,30 @@ export const Form = () => {
         {(props: FormikProps<Values>) => (
           <FormikForm className={styles.formWrapper}>
             <div className={styles.groupInputWrapper}>
-              <Input name="firstName" type="text" placeholder="Frist name" />
-              <Input name="lastName" type="text" placeholder="Last name" />
-              <Input name="workEmail" type="email" placeholder="Work email" />
-              <Input name="workPhone" type="phone" placeholder="Work Phone" />
+              <Input
+                fullWidth
+                name="firstName"
+                type="text"
+                placeholder="Frist name"
+              />
+              <Input
+                fullWidth
+                name="lastName"
+                type="text"
+                placeholder="Last name"
+              />
+              <Input
+                fullWidth
+                name="workEmail"
+                type="email"
+                placeholder="Work email"
+              />
+              <Input
+                fullWidth
+                name="workPhone"
+                type="phone"
+                placeholder="Work Phone"
+              />
             </div>
 
             <div className={styles.groupInputWrapper}>
@@ -88,11 +108,13 @@ export const Form = () => {
                 placeholder="Country"
                 select
                 items={countries}
+                fullWidth
               />
               <Input
                 name="companyName"
                 type="text"
                 placeholder="Company Name"
+                fullWidth
               />
               <Input
                 name="businessCategory"
@@ -100,8 +122,14 @@ export const Form = () => {
                 placeholder="Business Category"
                 select
                 items={businessCategorys}
+                fullWidth
               />
-              <Input name="date" type="date" placeholder="Select the date" />
+              <Input
+                name="date"
+                type="date"
+                placeholder="Select the date"
+                fullWidth
+              />
             </div>
             <div className={styles.buttonWrapper}>
               <Button size="medium">Send</Button>
