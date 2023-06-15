@@ -7,16 +7,18 @@ type Props = {
   children: ReactNode;
   classNames: string;
   color: "primary";
-  upper: boolean;
   onClick: () => void;
+  size: "small" | "medium" | "large";
+  upper: boolean;
 };
 
 export const Button: FC<Partial<Props>> = ({
   children,
   classNames,
   color,
-  upper,
   onClick,
+  size,
+  upper,
 }) => {
   return (
     <button
@@ -24,6 +26,9 @@ export const Button: FC<Partial<Props>> = ({
       className={classnames(styles.button, classNames, {
         [styles.primary]: color === "primary",
         [styles.upper]: upper,
+        [styles.small]: size === "small",
+        [styles.medium]: size === "medium",
+        [styles.large]: size === "large",
       })}
     >
       {children}
