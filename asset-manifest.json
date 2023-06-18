@@ -1,22 +1,39 @@
 {
   "files": {
-    "main.css": "/Decenter-Ads/static/css/main.984ed21c.css",
-    "main.js": "/Decenter-Ads/static/js/main.16067a01.js",
+    "main.css": "/Decenter-Ads/static/css/main.08ea6abb.css",
+    "main.js": "/Decenter-Ads/static/js/main.7dbf1d56.js",
     "static/media/main_bg.jpg": "/Decenter-Ads/static/media/main_bg.1871655ff3437c5033a4.jpg",
     "static/media/pineapple.jpg": "/Decenter-Ads/static/media/pineapple.6e2bb1de71df63f9291e.jpg",
     "static/media/food.jpg": "/Decenter-Ads/static/media/food.9eda9fabfb83dc9f2d9f.jpg",
+    "static/media/lg4.jpg": "/Decenter-Ads/static/media/lg4.60c4fa1aab7b9aaf005d.jpg",
     "static/media/drink.jpg": "/Decenter-Ads/static/media/drink.59f8f003a6eedbc271d4.jpg",
+    "static/media/lg1.jpg": "/Decenter-Ads/static/media/lg1.05cc0d071a5890a79003.jpg",
+    "static/media/lg3.jpg": "/Decenter-Ads/static/media/lg3.99123060f37c217e1d45.jpg",
     "static/media/map.jpg": "/Decenter-Ads/static/media/map.f789ebea9a8a7c285fed.jpg",
+    "static/media/lg2.jpg": "/Decenter-Ads/static/media/lg2.f0318f1922a8f6941fa1.jpg",
+    "static/media/lg5.jpg": "/Decenter-Ads/static/media/lg5.e6552ff3695434937ba0.jpg",
+    "static/media/lg6.jpg": "/Decenter-Ads/static/media/lg6.6e84bbcdbe73381f858f.jpg",
+    "static/media/lg7.jpg": "/Decenter-Ads/static/media/lg7.6262cf23ead81464946b.jpg",
+    "static/media/sm5.jpg": "/Decenter-Ads/static/media/sm5.69b03cbd904f8eb0f855.jpg",
+    "static/media/sm3.jpg": "/Decenter-Ads/static/media/sm3.85b357fc1714d81e9980.jpg",
+    "static/media/sm1.jpg": "/Decenter-Ads/static/media/sm1.844d12a7abc703170c2f.jpg",
+    "static/media/sm4.jpg": "/Decenter-Ads/static/media/sm4.94934202981c0d3ab717.jpg",
+    "static/media/sm2.jpg": "/Decenter-Ads/static/media/sm2.1c74ace3f711804d8730.jpg",
     "static/media/map_mobile.jpg": "/Decenter-Ads/static/media/map_mobile.0d6ed79f8e697c353a95.jpg",
+    "static/media/form.jpg": "/Decenter-Ads/static/media/form.64717a0c4b69c816c0c1.jpg",
+    "static/media/sm8.jpg": "/Decenter-Ads/static/media/sm8.1c8d45bbe89577d2593e.jpg",
+    "static/media/sm9.jpg": "/Decenter-Ads/static/media/sm9.111e1bbf90dec34bf68a.jpg",
+    "static/media/sm6.jpg": "/Decenter-Ads/static/media/sm6.6a113162a360cd12019b.jpg",
+    "static/media/sm7.jpg": "/Decenter-Ads/static/media/sm7.4cd5668b5f27c668ba3b.jpg",
     "static/media/HelveticaNeueCyr-Light.woff": "/Decenter-Ads/static/media/HelveticaNeueCyr-Light.c1b4dce50601b85b61e7.woff",
     "static/media/HelveticaNeueCyr-Roman.woff": "/Decenter-Ads/static/media/HelveticaNeueCyr-Roman.0247694e510ebe67cce1.woff",
     "static/media/HelveticaNeueCyr-Bold.woff": "/Decenter-Ads/static/media/HelveticaNeueCyr-Bold.e8ac3e02953308d54ad6.woff",
     "index.html": "/Decenter-Ads/index.html",
-    "main.984ed21c.css.map": "/Decenter-Ads/static/css/main.984ed21c.css.map",
-    "main.16067a01.js.map": "/Decenter-Ads/static/js/main.16067a01.js.map"
+    "main.08ea6abb.css.map": "/Decenter-Ads/static/css/main.08ea6abb.css.map",
+    "main.7dbf1d56.js.map": "/Decenter-Ads/static/js/main.7dbf1d56.js.map"
   },
   "entrypoints": [
-    "static/css/main.984ed21c.css",
-    "static/js/main.16067a01.js"
+    "static/css/main.08ea6abb.css",
+    "static/js/main.7dbf1d56.js"
   ]
 }
