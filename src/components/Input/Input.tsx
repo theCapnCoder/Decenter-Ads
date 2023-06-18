@@ -3,7 +3,6 @@ import classnames from "classnames";
 
 import "./input.scss";
 import { useField } from "formik";
-import { DropDown } from "../../assets/img/DropDown";
 import { DropDownList } from "./DropDownList/DropDownList";
 
 type BaseProps = {

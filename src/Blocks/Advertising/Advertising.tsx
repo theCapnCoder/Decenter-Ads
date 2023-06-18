@@ -1,7 +1,13 @@
-import styles from "./advertising.module.scss";
+import { useState } from "react";
 import Button from "../../components/Button";
+import Form from "../Form";
+import { Modal } from "../../components/Modal/Modal";
+
+import styles from "./advertising.module.scss";
 
 export const Advertising = () => {
+  const [modalActive, setModalActive] = useState(false);
+
   return (
     <div className={styles.advertising}>
       <div className={styles.card}>
@@ -16,10 +22,16 @@ export const Advertising = () => {
 
         <div className={styles.lgVisible}>
           <div className={styles.buttonWrapper}>
-            <Button>Join us at Cannes</Button>
+            <Button onClick={() => setModalActive((prev) => !prev)}>
+              Join us at Cannes
+            </Button>
           </div>
         </div>
       </div>
+
+      <Modal active={modalActive} setActive={setModalActive}>
+        <Form />
+      </Modal>
     </div>
   );
 };
