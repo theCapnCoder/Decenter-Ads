@@ -3,7 +3,7 @@
 
   input {
     width: 300px;
-    padding: 14px 22px;
+    padding: 14px 28px;
     border: 1px solid #f7f6f6;
     border-radius: 30px;
     background: transparent;
@@ -32,6 +32,7 @@
   }
 
   ::placeholder {
+    margin-left: 100px;
     position: relative;
     font-family: "Helvetica Neue";
     font-style: normal;

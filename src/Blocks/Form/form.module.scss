@@ -12,6 +12,17 @@
     color: #f9f9f9;
   }
 
+  .titleWrapper {
+    position: relative;
+
+    .circles {
+      position: absolute;
+      top: -28px;
+      right: 63px;
+    }
+  }
+
+
   .buttonWrapper {
     margin: 0 auto;
   }

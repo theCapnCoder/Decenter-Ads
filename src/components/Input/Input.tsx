@@ -57,7 +57,7 @@ export const Input: FC<BaseProps & Partial<Props>> = ({
           required={required}
           type={type}
           {...field}
-        ></input>
+        />
 
         {select && items && <DropDownList items={items} onChange={handleChange} />}
       </div>

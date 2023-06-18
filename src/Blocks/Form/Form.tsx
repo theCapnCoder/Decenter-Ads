@@ -5,6 +5,7 @@ import { Formik, FormikProps, Form as FormikForm } from "formik";
 import * as Yup from "yup";
 import Input from "../../components/Input";
 import Button from "../../components/Button";
+import { DropDownCircles } from "../../assets/img/DropDownCircles";
 
 type Values = {
   firstName: string;
@@ -47,7 +48,7 @@ const FormSchema = Yup.object().shape({
     .required("Last name is required"),
   workEmail: Yup.string().email().required("Email is required"),
   workPhone: Yup.string()
-    .matches(/^\+[1-9]\d{1,14}$/, "Invalid phone number")
+    .matches(/^\+[1-9]\d{1,14}$/, "Invalid phone number. Example +123...")
     .required("Phone number is required. Example +123..."),
 });
 
@@ -65,7 +66,12 @@ export const Form = () => {
 
   return (
     <div className={styles.form}>
-      <h1>Book a session with our specialist</h1>
+      <div className={styles.titleWrapper}>
+        <h1>Join us at Cannes</h1>
+        <div className={styles.circles}>
+          <DropDownCircles />
+        </div>
+      </div>
 
       <Formik
         initialValues={initialValues}
