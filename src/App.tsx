@@ -6,14 +6,10 @@ import Advertising from "./Blocks/Advertising";
 import Meet from "./Blocks/Meet";
 import Map from "./Blocks/Map";
 import Footer from "./Blocks/Footer";
-import Form from "./Blocks/Form";
-import { Modal } from "./components/Modal/Modal";
-import { useState } from "react";
 
 function App() {
   return (
-    <div>
-      {/* <Form /> */}
+    <div style={{maxWidth: "1366px", margin: "0 auto"}}>
       <Main />
       <Experience />
       <Cards />
