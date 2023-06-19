@@ -1,0 +1,10 @@
+@use "../abstracts/" as *;
+
+.container {
+  margin: 0 auto;
+  max-width: 390px;
+
+  @include breakpoint(lg) {
+    max-width: 1366px;
+  }
+}
